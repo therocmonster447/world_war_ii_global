@@ -1288,10 +1288,10 @@
     <sequence>
       <step name="gameInitDelegate" delegate="initDelegate" maxRunCount="1"/>
       <!-- Bidding Phase -->
-      <step name="germanBid" delegate="bid" player="Germans" maxRunCount="1"/>
-      <step name="germanBidPlace" delegate="placeBid" player="Germans" maxRunCount="1"/>
       <step name="russianBid" delegate="bid" player="Russians" maxRunCount="1"/>
       <step name="russianBidPlace" delegate="placeBid" player="Russians" maxRunCount="1"/>
+      <step name="germanBid" delegate="bid" player="Germans" maxRunCount="1"/>
+      <step name="germanBidPlace" delegate="placeBid" player="Germans" maxRunCount="1"/>
       <step name="japaneseBid" delegate="bid" player="Japanese" maxRunCount="1"/>
       <step name="japaneseBidPlace" delegate="placeBid" player="Japanese" maxRunCount="1"/>
       <step name="americanBid" delegate="bid" player="Americans" maxRunCount="1"/>
@@ -1306,6 +1306,17 @@
       <step name="anzacBidPlace" delegate="placeBid" player="ANZAC" maxRunCount="1"/>
       <step name="frenchBid" delegate="bid" player="French" maxRunCount="1"/>
       <step name="frenchBidPlace" delegate="placeBid" player="French" maxRunCount="1"/>
+      <!-- Russians Game Sequence -->
+      <step name="russiansTech" delegate="tech" player="Russians"/>
+      <step name="russiansTechActivation" delegate="tech_activation" player="Russians"/>
+      <step name="russiansPolitics" delegate="politics" player="Russians"/>
+      <step name="russiansCombatMove" delegate="move" player="Russians"/>
+      <step name="russiansAirborneCombatMove" delegate="specialCombatMove" player="Russians" display="Airborne Attack Move"/>
+      <step name="russiansPurchase" delegate="purchase" player="Russians"/>
+      <step name="russiansBattle" delegate="battle" player="Russians"/>
+      <step name="russiansNonCombatMove" delegate="move" player="Russians" display="Non Combat Move"/>
+      <step name="russiansPlace" delegate="place" player="Russians"/>
+      <step name="russiansEndTurn" delegate="endTurn" player="Russians"/> 
       <!-- Germans Game Sequence -->
       <step name="germansTech" delegate="tech" player="Germans"/>
       <step name="germansTechActivation" delegate="tech_activation" player="Germans"/>
@@ -1317,17 +1328,6 @@
       <step name="germansNonCombatMove" delegate="move" player="Germans" display="Non Combat Move"/>
       <step name="germansPlace" delegate="place" player="Germans"/>
       <step name="germansEndTurn" delegate="endTurn" player="Germans"/>
-      <!-- Russians Game Sequence -->
-      <step name="russiansTech" delegate="tech" player="Russians"/>
-      <step name="russiansTechActivation" delegate="tech_activation" player="Russians"/>
-      <step name="russiansPolitics" delegate="politics" player="Russians"/>
-      <step name="russiansCombatMove" delegate="move" player="Russians"/>
-      <step name="russiansAirborneCombatMove" delegate="specialCombatMove" player="Russians" display="Airborne Attack Move"/>
-      <step name="russiansPurchase" delegate="purchase" player="Russians"/>
-      <step name="russiansBattle" delegate="battle" player="Russians"/>
-      <step name="russiansNonCombatMove" delegate="move" player="Russians" display="Non Combat Move"/>
-      <step name="russiansPlace" delegate="place" player="Russians"/>
-      <step name="russiansEndTurn" delegate="endTurn" player="Russians"/>
       <!-- Japanese Game Sequence -->
       <step name="japaneseTech" delegate="tech" player="Japanese"/>
       <step name="japaneseTechActivation" delegate="tech_activation" player="Japanese"/>
